@@ -1,0 +1,44 @@
+@import '_main.scss';
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+html, body {
+  background: #000000 !important;
+  color: #f8f9fa;
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-color: #000000 #000000;
+  scrollbar-width: thin;
+}
+
+/* Webkit scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#pop-toast-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+}
