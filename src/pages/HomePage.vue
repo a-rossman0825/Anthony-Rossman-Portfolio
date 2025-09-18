@@ -36,7 +36,7 @@ const cards = computed(() => AppState.cards);
   height: 1000px;
 }
 .card-bg-dark {
-  background-color: #191a1c;
+  background-color: var(--bs-dark);
 }
 
 .card-bg-blue {

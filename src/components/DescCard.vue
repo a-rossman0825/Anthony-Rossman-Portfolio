@@ -20,6 +20,6 @@
 .card-text p {
   margin: 0;
   font-size: 1em;
-  color: #bfc4c9;
+  color: var(--bs-secondary);
 }
 </style>
