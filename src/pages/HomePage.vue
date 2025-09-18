@@ -1,77 +1,9 @@
 <script setup>
-import DescCard from '@/components/DescCard.vue';
-import NameCard from '@/components/NameCard.vue';
-import PfpCard from '@/components/PfpCard.vue';
-import TitleCard from '@/components/TitleCard.vue';
+import { AppState } from '@/AppState.js';
+import { computed } from 'vue';
 
+const cards = computed(() => AppState.cards);
 
-
-const cards = [
-  {
-    id: 1,
-    left: '2%',
-    top: '22%',
-    width: '643px',
-    height: '180px',
-    darkBG: true,
-    component: DescCard,
-  },
-  {
-    id: 2,
-    left: '66%',
-    top: '22%',
-    width: '300px',
-    height: '375px',
-    darkBG: true,
-    component: PfpCard,
-  },
-  {
-    id: 3,
-    left: '2%',
-    top: '50%',
-    width: '330px',
-    height: '160px',
-    darkBG: false,
-    component: TitleCard,
-  },
-  // {
-  //   id: 4,
-  //   left: '15%',
-  //   top: '100%',
-  //   width: '170px',
-  //   height: '200px',
-  //   darkBG: true,
-  //   component: CardJobTitle,
-  // },
-  // {
-  //   id: 5,
-  //   left: '45%',
-  //   top: '100%',
-  //   width: '260px',
-  //   height: '140px',
-  //   darkBG: true,
-  //   component: CardJobTitle,
-  // },
-  // {
-  //   id: 6,
-  //   left: '75%',
-  //   top: '100%',
-  //   width: '180px',
-  //   height: '200px',
-  //   darkBG: true,
-  //   component: CardJobTitle,
-  // },
-  {
-    id: 7,
-    left: '50%',
-    top: '50%',
-    width: '300px',
-    height: '330px',
-    component: NameCard,
-    darkBG: true,
-    center: true
-  }
-];
 </script>
 
 <template>
@@ -101,14 +33,14 @@ const cards = [
 .masonry-container {
   position: relative;
   width: 1030px;
-  height: 700px;
+  height: 1000px;
 }
 .card-bg-dark {
   background-color: #191a1c;
 }
 
 .card-bg-blue {
-  background-color: rgb(10, 63, 91);
+  background-color: var(--bs-primary);
 }
 
 .masonry-card {
@@ -116,8 +48,7 @@ const cards = [
   border-radius: .6rem;
   box-shadow: 2px 2px 3px rgb(47, 47, 47);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  
   font-size: 1.2rem;
   color: #eaeaea;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
@@ -127,7 +58,7 @@ const cards = [
 
   &:hover {
   border: 1px solid rgba(135, 131, 131, 0.159);
-  box-shadow: 3px 3px 4px rgba(100, 99, 99, 0.576);
+  box-shadow: 3px 3px 4px var(--bs-primary);
   transform: translate(0, -4px);
   }
 }
@@ -142,7 +73,7 @@ const cards = [
   
   &:hover {
     border: 1px solid rgba(135, 131, 131, 0.159);
-    box-shadow: 3px 3px 4px rgba(100, 99, 99, 0.576);
+    box-shadow: 3px 3px 4px var(--bs-primary);
     transform: translate(-50%, -4px);
   }
 }
