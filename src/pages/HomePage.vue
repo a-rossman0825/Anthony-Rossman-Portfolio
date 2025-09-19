@@ -52,7 +52,7 @@ const cards = computed(() => AppState.cards);
   font-size: 1.2rem;
   color: #eaeaea;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   cursor: pointer;
   border: 1px solid transparent;
 
@@ -67,7 +67,7 @@ const cards = computed(() => AppState.cards);
   font-size: 2rem;
   font-weight: 700;
   transform: translate(-50%, 0);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   cursor: pointer;
   border: 1px solid transparent;
   

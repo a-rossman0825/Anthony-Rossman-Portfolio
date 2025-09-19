@@ -4,6 +4,8 @@ import PfpCard from './components/PfpCard.vue'
 import TitleCard from './components/TitleCard.vue'
 import TechCard from './components/TechCard.vue'
 import NameCard from './components/NameCard.vue'
+import LinksCard from './components/LinksCard.vue'
+import HistoryCard from './components/HistoryCard.vue'
 
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
@@ -18,7 +20,7 @@ export const AppState = reactive({
       id: 1,
       left: '2%',
       top: '10%',
-      width: '643px',
+      width: '644px',
       height: '180px',
       darkBG: true,
       component: DescCard,
@@ -50,15 +52,15 @@ export const AppState = reactive({
       darkBG: true,
       component: TechCard,
     },
-    // {
-    //   id: 6,
-    //   left: '75%',
-    //   top: '100%',
-    //   width: '180px',
-    //   height: '200px',
-    //   darkBG: true,
-    //   component: CardJobTitle,
-    // },
+    {
+      id: 6,
+      left: '66%',
+      top: '48.5%',
+      width: '300px',
+      height: '135px',
+      darkBG: false,
+      component: LinksCard,
+    },
     {
       id: 7,
       left: '50%',
@@ -68,6 +70,15 @@ export const AppState = reactive({
       component: NameCard,
       darkBG: true,
       center: true
+    },
+    {
+      id: 8,
+      left: '35.5%',
+      top: '63%',
+      width: '613px',
+      height: '300px',
+      darkBG: true,
+      component: HistoryCard,
     }
   ],
 
@@ -294,4 +305,64 @@ export const AppState = reactive({
       ]
     }
   ],
+
+  linkIcons: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/a-rossman0825',
+      paths: [
+        {
+          d: 'M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z',
+          fill: 'var(--bs-secondary)',
+          transform: undefined,
+        },
+        {
+          d: 'M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0',
+          fill: 'var(--bs-dark)',
+          transform: undefined,
+        }
+      ]
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/anthony-rossman-08b62b364/',
+      paths: [
+        {
+          d: 'M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z',
+          fill: 'var(--bs-secondary)',
+          transform: undefined,
+        },
+        {
+          d: 'M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z',
+          fill: 'var(--bs-primary)',
+          transform: undefined,
+        }
+      ]
+    },
+    {
+      name: 'Email',
+      url: 'mailto:anthony.rossman0825@gmail.com?subject=Howdy!&body=Hi%20Anthony!',
+      paths: [
+        {
+          d: 'M1 5H2V4H20V5H21V18H20V19H2V18H1V5M3 17H19V9H18V10H16V11H14V12H12V13H10V12H8V11H6V10H4V9H3V17M19 6H3V7H5V8H7V9H9V10H13V9H15V8H17V7H19V6Z',
+          fill: 'var(--bs-secondary)',
+          transform: "scale(5.8)"
+        },
+      ],
+      viewBox: "0 0 128 128",
+    },
+    {
+      name: 'Resume',
+      url: '/Resume.pdf',
+      paths: [
+        {
+          d: 'M34.395,0H9.522c-2.762,0-5,2.239-5,5v33.916c0,2.761,2.238,5,5,5h24.871c2.762,0,5-2.239,5-5V5 C39.395,2.239,37.154,0,34.395,0z M9.208,16.855c0-1.172,0.951-2.121,2.121-2.121h0.742c-0.791-0.874-1.277-2.03-1.277-3.304 c0-2.723,2.209-4.931,4.932-4.931c2.725,0,4.932,2.207,4.932,4.932c0,1.272-0.486,2.429-1.279,3.303h0.709 c1.172,0,2.121,0.949,2.121,2.121v3.578c0,1.122-0.875,2.03-1.975,2.106h-9.051c-1.1-0.076-1.975-0.984-1.975-2.106V16.855 L9.208,16.855z M32.708,37.416h-21.5c-1.104,0-2-0.896-2-2s0.896-2,2-2h21.5c1.104,0,2,0.896,2,2S33.812,37.416,32.708,37.416z M32.708,29.916h-21.5c-1.104,0-2-0.896-2-2s0.896-2,2-2h21.5c1.104,0,2,0.896,2,2S33.812,29.916,32.708,29.916z M32.708,22.416 h-6.5c-1.104,0-2-0.896-2-2c0-1.104,0.896-2,2-2h6.5c1.104,0,2,0.896,2,2C34.708,21.52,33.812,22.416,32.708,22.416z',
+          fill: 'var(--bs-secondary)',
+          transform: "scale(2.915)",
+        },
+      ]
+    },
+  ],
 })
+
+{/* <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256px" height="256px" viewBox="0 0 43.916 43.916" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d=""></path> </g> </g></svg> */}
