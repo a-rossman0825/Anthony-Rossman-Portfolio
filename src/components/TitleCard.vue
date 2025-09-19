@@ -5,7 +5,7 @@
 
 <template>
   <div class="card-text pt-4 text-center">
-    <h3>28yo Fullstack Developer From Boise, Idaho <img src="../assets/img/idaho-flag.ico" alt="State Flag of Idaho" class="flag-img" /></h3>
+    <h3>Fullstack Developer From Boise, Idaho <img src="../assets/img/idaho-flag.ico" alt="State Flag of Idaho" class="flag-img" /></h3>
   </div>
 </template>
 

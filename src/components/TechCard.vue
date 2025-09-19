@@ -40,29 +40,22 @@ h3 {
 
 p {
   position: relative;
-  /* Essential for positioning the tooltip */
 }
 
 p::after {
   content: attr(data-tooltip);
-  /* Get content from data-tooltip attribute */
   position: absolute;
   bottom: 105%;
-  /* Position above the element */
   left: 50%;
   transform: translateX(-50%);
-  /* Center the tooltip horizontally */
   background-color: var(--bs-primary);
   color: var(--bs-secondary);
   padding: 3px 8px;
   border-radius: 20px;
   white-space: nowrap;
-  /* Prevent line breaks in the tooltip */
   opacity: 0;
-  /* Initially hidden */
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  /* Smooth transition */
   z-index: 1000;
   font-size: 16px;
 }

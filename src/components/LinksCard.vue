@@ -10,7 +10,7 @@ const linkIcons = computed(() => AppState.linkIcons);
   <section>
     <div class="d-flex justify-content-center mt-4 pt-3 ms-2 gap-4 link-icons">
       <a v-for="link in linkIcons" :key="link.name" :href="link.url" target="_blank" rel="noopener noreferrer"
-        :aria-label="link.name" class="link-svg-wrapper">
+        :aria-label="link.name" :data-tooltip="link.name" class="link-svg-wrapper">
         <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" :viewBox="String(link.viewBox || '0 0 128 128')">
           <path v-for="(path, i) in link.paths" :key="i" :d="path.d" :fill="path.fill || '#fff'"
             :transform="path.transform ?? undefined" />
@@ -34,5 +34,32 @@ const linkIcons = computed(() => AppState.linkIcons);
 
 .link-svg-wrapper:hover {
   transform: scale(1.08);
+}
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bs-secondary);
+  color: var(--bs-primary);
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  font-size: 16px;
+}
+
+a:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 </style>
