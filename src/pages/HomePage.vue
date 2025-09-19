@@ -33,7 +33,7 @@ const cards = computed(() => AppState.cards);
 .masonry-container {
   position: relative;
   width: 1030px;
-  height: 1000px;
+  height: 1300px;
 }
 .card-bg-dark {
   background-color: var(--bs-dark);

@@ -11,10 +11,10 @@ const techIcons = computed(() => AppState.techIcons);
 <template>
   <section>
     <div class="">
-      <h3 class="mb-4 mt-4">Technologies</h3>
+      <h3 class="mb-5 mt-4">Technologies</h3>
     </div>
 
-    <div class="d-flex justify-content-center gap-4 tech-icons ">
+    <div class="d-flex justify-content-center gap-5 tech-icons ">
       <p v-for="techIcon in techIcons" :key="techIcon.name" :data-tooltip="techIcon.name" :aria-label="techIcon.name">
         <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path v-for="(path, i) in techIcon.paths" :key="i" :d="path.d" :fill="path.fill || '#fff'"

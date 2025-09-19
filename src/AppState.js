@@ -37,7 +37,7 @@ export const AppState = reactive({
     {
       id: 3,
       left: '2%',
-      top: '29%',
+      top: '26%',
       width: '330px',
       height: '160px',
       darkBG: false,
@@ -46,16 +46,16 @@ export const AppState = reactive({
     {
       id: 5,
       left: '2%',
-      top: '46%',
+      top: '40%',
       width: '330px',
-      height: '340px',
+      height: '620px',
       darkBG: true,
       component: TechCard,
     },
     {
       id: 6,
       left: '66%',
-      top: '48.5%',
+      top: '41%',
       width: '300px',
       height: '135px',
       darkBG: false,
@@ -64,7 +64,7 @@ export const AppState = reactive({
     {
       id: 7,
       left: '50%',
-      top: '29%',
+      top: '26%',
       width: '300px',
       height: '330px',
       component: NameCard,
@@ -74,9 +74,9 @@ export const AppState = reactive({
     {
       id: 8,
       left: '35.5%',
-      top: '63%',
+      top: '53%',
       width: '613px',
-      height: '300px',
+      height: '450px',
       darkBG: true,
       component: HistoryCard,
     }
@@ -364,5 +364,3 @@ export const AppState = reactive({
     },
   ],
 })
-
-{/* <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256px" height="256px" viewBox="0 0 43.916 43.916" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d=""></path> </g> </g></svg> */}
