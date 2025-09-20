@@ -1,4 +1,4 @@
-import { reactive } from 'vue'
+import { markRaw, reactive } from 'vue'
 import DescCard from './components/DescCard.vue'
 import PfpCard from './components/PfpCard.vue'
 import TitleCard from './components/TitleCard.vue'
@@ -9,76 +9,71 @@ import HistoryCard from './components/HistoryCard.vue'
 
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
-  /**@type {import('@bcwdev/auth0provider-client').Identity} */
-  identity: null,
-  /** @type {import('./models/Account.js').Account} user info from the database*/
-  account: null,
-
 
   cards: [
     {
       id: 1,
       left: '2%',
-      top: '10%',
+      top: '6%',
       width: '644px',
       height: '180px',
       darkBG: true,
-      component: DescCard,
+      component: markRaw(DescCard),
     },
     {
       id: 2,
       left: '66%',
-      top: '10%',
+      top: '6%',
       width: '300px',
       height: '375px',
       darkBG: true,
-      component: PfpCard,
+      component: markRaw(PfpCard),
     },
     {
       id: 3,
       left: '2%',
-      top: '26%',
+      top: '24%',
       width: '330px',
       height: '160px',
       darkBG: false,
-      component: TitleCard,
+      component: markRaw(TitleCard),
     },
     {
-      id: 5,
+      id: 4,
       left: '2%',
       top: '40%',
       width: '330px',
-      height: '620px',
+      height: '646px',
       darkBG: true,
-      component: TechCard,
+      component: markRaw(TechCard),
     },
     {
-      id: 6,
+      id: 5,
       left: '66%',
-      top: '41%',
+      top: '42%',
       width: '300px',
       height: '135px',
       darkBG: false,
-      component: LinksCard,
+      component: markRaw(LinksCard),
     },
     {
-      id: 7,
+      id: 6,
       left: '50%',
-      top: '26%',
+      top: '24%',
       width: '300px',
-      height: '330px',
-      component: NameCard,
+      height: '333px',
+      component: markRaw(NameCard),
       darkBG: true,
       center: true
     },
     {
-      id: 8,
+      id: 7,
       left: '35.5%',
-      top: '53%',
+      top: '55.5%',
       width: '613px',
-      height: '450px',
+      height: '475px',
       darkBG: true,
-      component: HistoryCard,
+      component: markRaw(HistoryCard),
     }
   ],
 
@@ -240,7 +235,7 @@ export const AppState = reactive({
       ]
     },
     {
-      name: "bootstrap",
+      name: "Bootstrap",
       paths: [
         {
           d: "M14.985 27.712c-.237-6.815 5.072-13.099 12.249-13.099h73.54c7.177 0 12.486 6.284 12.249 13.099-.228 6.546.068 15.026 2.202 21.94 2.141 6.936 5.751 11.319 11.664 11.883v6.387c-5.913.564-9.523 4.947-11.664 11.883-2.134 6.914-2.43 15.394-2.202 21.94.237 6.815-5.072 13.098-12.249 13.098h-73.54c-7.177 0-12.486-6.284-12.249-13.098.228-6.546-.068-15.026-2.203-21.94-2.14-6.935-5.76-11.319-11.673-11.883v-6.387c5.913-.563 9.533-4.947 11.673-11.883 2.135-6.914 2.43-15.394 2.203-21.94z",
@@ -363,4 +358,14 @@ export const AppState = reactive({
       ]
     },
   ],
+
+  animationDirs: {
+    1:  'from-left',
+    2: 'from-top',
+    3: 'from-left',
+    4: 'from-bottom',
+    5: 'from-right',
+    6: 'fade',
+    7: 'from-right'
+  }
 })

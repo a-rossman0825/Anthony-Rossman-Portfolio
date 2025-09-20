@@ -15,7 +15,7 @@ const techIcons = computed(() => AppState.techIcons);
     </div>
 
     <div class="d-flex justify-content-center gap-5 tech-icons ">
-      <p v-for="techIcon in techIcons" :key="techIcon.name" :data-tooltip="techIcon.name" :aria-label="techIcon.name">
+      <p v-for="techIcon in techIcons" :key="techIcon.name" :data-tooltip="techIcon.name">
         <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path v-for="(path, i) in techIcon.paths" :key="i" :d="path.d" :fill="path.fill || '#fff'"
             :transform="path.transform ? path.transform.toString() : undefined" />
