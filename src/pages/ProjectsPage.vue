@@ -204,6 +204,7 @@ onMounted(() => {
 
 .project-card.enter-active:hover {
   transform: translateY(-4px);
+  cursor: pointer;
 }
 
 .left-card {
@@ -217,11 +218,12 @@ onMounted(() => {
   flex: 0 0 50%;
   overflow-y: auto;
   transition: height 800ms ease-in-out;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .right-card:hover {
   border: 1px solid rgba(135, 131, 131, 0.159);
+  cursor: pointer;
 }
 
 .right-card.card-collapsed {
