@@ -26,7 +26,6 @@ export default defineConfig({
     port: 8080
   },
 
-  // GitHub Pages deployment configuration
   base: '/Anthony-Rossman-Portfolio/'
 })
 

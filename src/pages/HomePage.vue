@@ -13,10 +13,6 @@ AppState.cards.forEach(card => {
 
 const directions = computed(() => AppState.animationDirs);
 
-// NOTE: For the small-screen stacked layout we use `data-id` attributes
-// and CSS attribute selectors to enforce a deterministic order. This is
-// more robust than relying on class mappings if card ids change.
-
 onMounted(() => {
   animateCardEntrance([6, 1, 2, 3, 5, 4, 7]);
 });
@@ -170,8 +166,7 @@ function animateCardEntrance(cardSequence) {
   letter-spacing: 1px;
 }
 
-/* Responsive stacked layout for viewports narrower than the desktop container.
-   This places each card in a vertical flow order and hides the profile card. */
+
 @media (max-width: 1030px) {
   .masonry-container {
     position: static;
@@ -182,7 +177,6 @@ function animateCardEntrance(cardSequence) {
     flex-direction: column;
   }
 
-  /* Make cards participate in normal flow (stacked) */
   .masonry-card {
     position: relative !important;
     left: auto !important;
@@ -191,7 +185,6 @@ function animateCardEntrance(cardSequence) {
     transform: none !important;
     margin: 10px 0;
     height: auto !important;
-    /* Allow cards to size to content */
     min-height: auto !important;
     display: flex;
     flex-direction: column;
@@ -201,41 +194,32 @@ function animateCardEntrance(cardSequence) {
     text-align: center;
   }
 
-  /* Hide profile (pfp) card on small screens (id 2 assumed for pfp). */
   .masonry-card[data-id="2"] {
     display: none !important;
   }
 
-  /* Desired stacked sequence: name, title, desc, tech, history, links */
   .masonry-card[data-id="6"] {
     order: 1;
   }
 
-  /* name  (id 6) */
   .masonry-card[data-id="3"] {
     order: 2;
   }
 
-  /* title (id 3) */
   .masonry-card[data-id="1"] {
     order: 3;
   }
 
-  /* desc  (id 1) */
   .masonry-card[data-id="4"] {
     order: 4;
   }
 
-  /* tech  (id 4) */
   .masonry-card[data-id="7"] {
     order: 5;
   }
 
-  /* history(id 7) */
   .masonry-card[data-id="5"] {
     order: 6;
   }
-
-  /* links (id 5) */
 }
 </style>

@@ -1,7 +1,6 @@
 <script setup>
 import { reactive, onMounted } from 'vue';
 
-// Animation state tracking
 const showCards = reactive({
   left: false,
   rightExpanded: false,
@@ -9,7 +8,6 @@ const showCards = reactive({
   rightSecondExpanded: false
 });
 
-// Click handlers for GitHub navigation
 const openTemplateRepo = () => {
   window.open('https://github.com/a-rossman0825/fullstack-template', '_blank');
 };
@@ -18,7 +16,6 @@ const openKeeprRepo = () => {
   window.open('https://github.com/a-rossman0825/keepr', '_blank');
 };
 
-// Trigger entrance animations on mount
 onMounted(() => {
   // Both left cards slide in together
   setTimeout(() => {
@@ -158,7 +155,6 @@ onMounted(() => {
   padding: 40px 0;
 }
 
-/* Second row positioning */
 .second-row {
   margin-top: 40px;
 }
@@ -179,7 +175,6 @@ onMounted(() => {
   }
 }
 
-/* Entrance animation states */
 .project-card.enter {
   opacity: 0;
   transform-origin: center center;
@@ -191,7 +186,6 @@ onMounted(() => {
   transform: translate(0, 0);
 }
 
-/* Directional entrance effects */
 .project-card.from-left.enter {
   transform: translateX(-50px);
 }
@@ -208,7 +202,6 @@ onMounted(() => {
   transform: translateY(0);
 }
 
-/* Ensure hover states work properly with animations */
 .project-card.enter-active:hover {
   transform: translateY(-4px);
 }
@@ -222,34 +215,28 @@ onMounted(() => {
 
 .right-card {
   flex: 0 0 50%;
-  padding: 30px;
   overflow-y: auto;
   transition: height 800ms ease-in-out;
+  border: none;
 }
 
-/* Separate hover transition for smooth effects */
 .right-card:hover {
-  transition: box-shadow 400ms ease-in-out, transform 400ms ease-in-out;
+  border: 1px solid rgba(135, 131, 131, 0.159);
 }
 
-/* Card height states */
 .right-card.card-collapsed {
   height: 120px;
-  /* Just enough for the header */
 }
 
 .right-card.card-expanded {
   height: 350px;
-  /* Full height to show all content */
   transition: height 800ms ease-in-out, box-shadow 400ms ease-in-out, transform 400ms ease-in-out;
 }
 
-/* Description content */
 .right-card .description-content {
   margin-top: 20px;
   opacity: 0;
   transition: opacity 200ms ease-in-out 200ms;
-  /* Delay opacity until height expands */
 }
 
 .right-card.card-expanded .description-content {
@@ -287,6 +274,11 @@ onMounted(() => {
 }
 
 .project-description {
+  padding: 30px;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+
   h3 {
     margin: 0 0 20px 0;
     font-size: 1.8rem;
@@ -330,7 +322,6 @@ onMounted(() => {
   }
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 1030px) {
   .masonry-container {
     width: 100%;
@@ -356,6 +347,9 @@ onMounted(() => {
     flex: none;
     height: auto !important;
     max-height: none !important;
+  }
+
+  .project-description {
     padding: 20px;
   }
 
@@ -368,27 +362,22 @@ onMounted(() => {
     margin-top: 20px;
   }
 
-  /* Stack order: template left, template right, keepr left, keepr right */
   .project-card:nth-child(1) {
     order: 1;
   }
 
-  /* Vue template left */
   .project-card:nth-child(2) {
     order: 2;
   }
 
-  /* Vue template right */
   .project-card:nth-child(3) {
     order: 3;
   }
 
-  /* Keepr left */
   .project-card:nth-child(4) {
     order: 4;
   }
 
-  /* Keepr right */
 
   .project-image {
     height: 200px;

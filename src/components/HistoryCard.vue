@@ -13,7 +13,7 @@
       </div>
       <p class="mb-2 text-secondary">I have worked as a freelance Web Developer for the last year, building custom solutions for local businesses including a website landing page and an eccommerce site.</p>
       <div class="d-flex align-items-center">
-        <h4 class="mb-0">Boise CodeWorks</h4>
+        <h4 class="mb-0">Intern - Boise CodeWorks</h4>
         <small class="text-secondary ms-2">(2024 - 2025)</small>
       </div>
       <p class="mb-2 text-secondary">Renowned Boot Camp for Software and Web Development education.
