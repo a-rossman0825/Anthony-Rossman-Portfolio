@@ -74,7 +74,7 @@ onMounted(() => {
             <div class="tech-stack">
               <h4>Tech Stack:</h4>
               <ul>
-                <li>Vue 3 & TypeScript</li>
+                <li>Vue 3 & TypeScript Client</li>
                 <li>Vite Build Tool</li>
                 <li>SCSS Styling</li>
                 <li>ESLint Configuration</li>
@@ -121,7 +121,7 @@ onMounted(() => {
             <div class="tech-stack">
               <h4>Tech Stack:</h4>
               <ul>
-                <li>Vue 3 & TypeScript Client</li>
+                <li>Vue 3 Client</li>
                 <li>SCSS Styling</li>
                 <li>C# and MySQL Database</li>
                 <li>JWT Authentication</li>
