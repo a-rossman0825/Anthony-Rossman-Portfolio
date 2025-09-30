@@ -178,6 +178,8 @@ function animateCardEntrance(cardSequence) {
     width: 100%;
     height: auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
 
   /* Make cards participate in normal flow (stacked) */
@@ -188,18 +190,20 @@ function animateCardEntrance(cardSequence) {
     width: 100% !important;
     transform: none !important;
     margin: 10px 0;
+    height: auto !important;
+    /* Allow cards to size to content */
+    min-height: auto !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
   }
 
   /* Hide profile (pfp) card on small screens (id 2 assumed for pfp). */
   .masonry-card[data-id="2"] {
     display: none !important;
-  }
-
-  /* Enforce the requested vertical sequence regardless of DOM order.
-    The id numbers below map to the IDs used in your AppState.cards. */
-  .masonry-container {
-    display: flex;
-    flex-direction: column;
   }
 
   /* Desired stacked sequence: name, title, desc, tech, history, links */

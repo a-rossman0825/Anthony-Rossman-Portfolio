@@ -337,8 +337,84 @@ onMounted(() => {
     padding: 20px;
     flex-direction: column;
     height: auto;
+    flex-wrap: nowrap;
   }
 
+  .project-card {
+    width: 100% !important;
+    margin-bottom: 20px;
+    height: auto !important;
+  }
 
+  .left-card {
+    flex: none;
+    height: auto !important;
+    max-height: 400px;
+  }
+
+  .right-card {
+    flex: none;
+    height: auto !important;
+    max-height: none !important;
+    padding: 20px;
+  }
+
+  .right-card.card-collapsed,
+  .right-card.card-expanded {
+    height: auto !important;
+  }
+
+  .second-row {
+    margin-top: 20px;
+  }
+
+  /* Stack order: template left, template right, keepr left, keepr right */
+  .project-card:nth-child(1) {
+    order: 1;
+  }
+
+  /* Vue template left */
+  .project-card:nth-child(2) {
+    order: 2;
+  }
+
+  /* Vue template right */
+  .project-card:nth-child(3) {
+    order: 3;
+  }
+
+  /* Keepr left */
+  .project-card:nth-child(4) {
+    order: 4;
+  }
+
+  /* Keepr right */
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-title {
+    flex: none;
+    padding: 15px 20px;
+  }
+
+  .project-description {
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin: 20px 0 10px 0;
+    }
+  }
 }
 </style>
