@@ -26,6 +26,6 @@ export default defineConfig({
     port: 8080
   },
 
-  base: '/Anthony-Rossman-Portfolio/'
+  base: './'
 })
 
