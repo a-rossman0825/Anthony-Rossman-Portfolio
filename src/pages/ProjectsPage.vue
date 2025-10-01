@@ -41,7 +41,7 @@ onMounted(() => {
         'from-left': true
       }" @click="openTemplateRepo">
         <div class="project-image">
-          <img src="@/assets/img/template-img.png" alt="Vue.js Fullstack Project Template" />
+          <img src="@/assets/img/template-img.png" alt="Vue.js Fullstack Project Template Screenshot" />
         </div>
         <div class="project-title">
           <h2>Vue.js Fullstack Project Template</h2>
@@ -93,7 +93,7 @@ onMounted(() => {
         'from-left': true
       }" @click="openKeeprRepo">
         <div class="project-image">
-          <img src="@/assets/img/keepr-screenshots/Screenshot-1.png" alt="Keepr (Fullstack Pinterest Clone)" />
+          <img src="@/assets/img/keepr-screenshots/Screenshot-1.png" alt="Keepr (Fullstack Pinterest Clone) Screenshot" />
         </div>
         <div class="project-title">
           <h2>Keepr (Fullstack Pinterest Clone)</h2>
