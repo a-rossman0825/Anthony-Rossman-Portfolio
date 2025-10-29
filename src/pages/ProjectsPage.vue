@@ -9,7 +9,7 @@ const showCards = reactive({
 });
 
 const openTemplateRepo = () => {
-  window.open('https://github.com/a-rossman0825/fullstack-template', '_blank');
+  window.open('https://github.com/a-rossman0825/fs-template', '_blank');
 };
 
 const openKeeprRepo = () => {
@@ -41,7 +41,7 @@ onMounted(() => {
         'from-left': true
       }" @click="openTemplateRepo">
         <div class="project-image">
-          <img src="@/assets/img/template-img.png" alt="Vue.js Fullstack Project Template Screenshot" />
+          <img src="@/assets/img/dashboard-screenshot.png" alt="Vue.js Fullstack Project Template Screenshot" />
         </div>
         <div class="project-title">
           <h2>Vue.js Fullstack Project Template</h2>
@@ -61,7 +61,7 @@ onMounted(() => {
               building modern web
               applications.
               It utilizes a Vue.js Frontend with full TypeScript Support for type-safe client-side development, and a
-              .NET Backend with a C#/EFCore API supported by a SQL Database.
+              .NET Backend with a C#/EFCore API supported by a SQL Database, including pre-integrated Auth0 services and middleware for easier authentication setup.
             </p>
             <p>
               Features include component-based design, reactive state management, SPA site routing, and modern build
@@ -76,7 +76,7 @@ onMounted(() => {
               <ul>
                 <li>Vue 3 & TypeScript Client</li>
                 <li>Vite Build Tool</li>
-                <li>SCSS Styling</li>
+                <li>Bootstrap & SCSS Styling</li>
                 <li>ESLint Configuration</li>
                 <li>C#/EFCore Server with MySQL Database</li>
               </ul>
