@@ -4,7 +4,7 @@
 
 
 <template>
-  <div class="card-text pt-4 text-center">
+  <div class="card-text pt-5 text-center">
     <h3>Fullstack Developer From Boise, Idaho <img src="../assets/img/idaho-flag.ico" alt="State Flag of Idaho" class="flag-img" /></h3>
   </div>
 </template>

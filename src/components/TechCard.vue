@@ -14,13 +14,13 @@ const techIcons = computed(() => AppState.techIcons);
       <h3 class="mb-5 mt-4">Technologies</h3>
     </div>
 
-    <div class="d-flex justify-content-center gap-5 tech-icons ">
-      <p v-for="techIcon in techIcons" :key="techIcon.name" :data-tooltip="techIcon.name">
+    <div class="d-flex justify-content-center gap-5 tech-icons">
+      <a v-for="techIcon in techIcons" :key="techIcon.name" :data-tooltip="techIcon.name" :href="techIcon.link" target="_blank">
         <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path v-for="(path, i) in techIcon.paths" :key="i" :d="path.d" :fill="path.fill || '#fff'"
             :transform="path.transform ? path.transform.toString() : undefined" />
         </svg>
-      </p>
+      </a>
     </div>
   </section>
 </template>
@@ -38,11 +38,24 @@ h3 {
   padding-inline-start: 1rem;
 }
 
-p {
+a {
+  text-decoration: none;
   position: relative;
+  opacity: 90%;
 }
 
-p::after {
+svg {
+  opacity: 80%;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    opacity: 100%;
+    filter: drop-shadow(0 2px 6px rgb(27, 134, 167));
+    transform: scale(1.1);
+  }
+}
+
+a::after {
   content: attr(data-tooltip);
   position: absolute;
   bottom: 105%;
@@ -60,7 +73,7 @@ p::after {
   font-size: 16px;
 }
 
-p:hover::after {
+a:hover::after {
   opacity: 1;
   visibility: visible;
 }
