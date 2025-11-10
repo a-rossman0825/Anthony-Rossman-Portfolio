@@ -55,22 +55,7 @@ onMounted(() => {
       }" @click="openTemplateRepo">
         <div class="project-description">
           <h3>Project Overview</h3>
-          <div class="description-content">
-            <p>
-              This open source Vue.js fullstack project template provides a comprehensive and easy to use foundation for
-              building modern web
-              applications.
-              It utilizes a Vue.js Frontend with full TypeScript Support for type-safe client-side development, and a
-              .NET Backend with a C#/EFCore API supported by a SQL Database, including pre-integrated Auth0 services and middleware for easier authentication setup.
-            </p>
-            <p>
-              Features include component-based design, reactive state management, SPA site routing, and modern build
-              tooling
-              with Vite and EF Core. The template is designed to accelerate development while maintaining best practices
-              for code
-              organization
-              and maintainability.
-            </p>
+          <div class="description-content pb-2">
             <div class="tech-stack">
               <h4>Tech Stack:</h4>
               <ul>
@@ -81,6 +66,22 @@ onMounted(() => {
                 <li>C#/EFCore Server with MySQL Database</li>
               </ul>
             </div>
+            <p>
+              &nbsp; &nbsp; This open source Vue.js fullstack project template provides a comprehensive and easy to use foundation for
+              building modern web
+              applications.
+              It utilizes a Vue.js Frontend with full TypeScript Support for type-safe client-side development, and a
+              .NET Backend with a C#/EFCore API supported by a SQL Database, including pre-integrated Auth0 services and middleware for easier authentication setup.
+            </p>
+            <p>
+              &nbsp; Features include component-based design, reactive state management, SPA site routing, and modern build
+              tooling
+              with Vite and EF Core. The template is designed to accelerate development while maintaining best practices
+              for code
+              organization
+              and maintainability.
+            </p>
+            
           </div>
         </div>
       </div>
@@ -107,7 +108,16 @@ onMounted(() => {
       }" @click="openKeeprRepo">
         <div class="project-description">
           <h3>Project Overview</h3>
-          <div class="description-content">
+          <div class="description-content pb-1">
+            <div class="tech-stack">
+              <h4>Tech Stack:</h4>
+              <ul>
+                <li>Vue 3 Client</li>
+                <li>SCSS Styling</li>
+                <li>C# and MySQL Database</li>
+                <li>JWT Authentication</li>
+              </ul>
+            </div>
             <p>
               Keepr is a full-stack Pinterest clone that allows users to create, organize, and share visual content
               through a modern web interface. Built with Vue.js frontend and a robust backend API, it provides seamless
@@ -118,15 +128,7 @@ onMounted(() => {
               organization, social sharing capabilities, and responsive design. The application demonstrates full-stack
               development skills with modern web technologies.
             </p>
-            <div class="tech-stack">
-              <h4>Tech Stack:</h4>
-              <ul>
-                <li>Vue 3 Client</li>
-                <li>SCSS Styling</li>
-                <li>C# and MySQL Database</li>
-                <li>JWT Authentication</li>
-              </ul>
-            </div>
+            
           </div>
         </div>
       </div>
