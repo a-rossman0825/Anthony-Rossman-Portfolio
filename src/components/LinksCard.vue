@@ -8,7 +8,7 @@ const linkIcons = computed(() => AppState.linkIcons);
 
 <template>
   <section>
-    <div class="d-flex justify-content-center mt-4 pt-3 ms-2 gap-4 link-icons">
+    <div class="d-flex justify-content-center mt-lg-4 pt-lg-3 ms-2 gap-5 gap-lg-4 link-icons">
       <a v-for="link in linkIcons" :key="link.name" :href="link.url" target="_blank" rel="noopener noreferrer"
         :aria-label="link.name" :data-tooltip="link.name" class="link-svg-wrapper">
         <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" :viewBox="String(link.viewBox || '0 0 128 128')">

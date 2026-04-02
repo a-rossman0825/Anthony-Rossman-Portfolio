@@ -119,12 +119,12 @@ onMounted(() => {
               </ul>
             </div>
             <p>
-              Keepr is a full-stack Pinterest clone that allows users to create, organize, and share visual content
+              &nbsp; Keepr is a full-stack Pinterest clone that allows users to create, organize, and share visual content
               through a modern web interface. Built with Vue.js frontend and a robust backend API, it provides seamless
               user experience for content discovery and curation.
             </p>
             <p>
-              Features include user authentication, image upload and storage "Keeps" & "Vaults" creation and
+              &nbsp; Features include user authentication, image upload and storage, "Keeps" & "Vaults" creation and
               organization, social sharing capabilities, and responsive design. The application demonstrates full-stack
               development skills with modern web technologies.
             </p>

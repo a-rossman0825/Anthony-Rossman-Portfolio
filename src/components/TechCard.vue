@@ -11,7 +11,7 @@ const techIcons = computed(() => AppState.techIcons);
 <template>
   <section>
     <div class="">
-      <h3 class="mb-5 mt-4">Technologies</h3>
+      <h3 class="mb-4 mt-4">Technologies</h3>
     </div>
 
     <div class="d-flex justify-content-center gap-5 tech-icons">
