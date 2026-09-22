@@ -5,11 +5,14 @@
 <template>
   <div class="card-text">
     <div class="d-flex align-items-center ps-3">
-      <h3 class="pt-4 ms-2">Hello There!</h3>
+      <h3 class="pt-3 ms-2">Hello There!</h3>
       <img src="../assets/img/waving-hand-sign_1f44b.gif" alt="a waving hand emoji gif" class="img-fluid pt-2" />
     </div>
-    <p class="px-4 pb-3">My name is Anthony, and I am a fullstack developer dedicated to creating efficient software
-      solutions, clean UI/UX, and maintainable apps that don't make the user want to pull their hair out.</p>
+    <p class="px-4 text-start">
+      I'm Anthony, a Fullstack Vue/.NET Developer building tools and web applications with C#/.NET Core, TypeScript, and Vue.js. 
+      Drawing from a legal industry background, I design clean enterprise solutions focused on accessibility, data integrity, 
+      and excellent UI performance.
+    </p>
   </div>
 </template>
 
